@@ -23,8 +23,7 @@ export async function loadAdmin(): Promise<any> {
 }
 export async function loadStatistics(): Promise<any> {
   try {
-    return;
-    const res = await api.get("admin/statistics");
+    const res = await api.get("api/admin/statistics");
     return setStatistics(res.data);
   } catch (error) {}
 }
