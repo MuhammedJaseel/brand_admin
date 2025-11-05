@@ -1,0 +1,12 @@
+
+import { APP_VERSION } from "../services/config";
+import { Logo } from "./librery";
+
+export default function LoadingPage() {
+  return (
+    <div className="flex flex-col justify-center items-center w-[100%] h-[100vh]">
+      <img src={Logo.app} width={160} />
+      <div className="text-[14px] mt-6">Loading (v{APP_VERSION})</div>
+    </div>
+  );
+}
