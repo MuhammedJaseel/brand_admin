@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { AddressT, EthereumBlockie } from "../widgets/ethers";
 import { IC } from "../components/librery";
 import { Paging } from "../components/paging";
 import { useSelector } from "react-redux";
@@ -69,9 +68,7 @@ export default function PurchasesPage() {
         {total < 1 && <div className="text-center text-sm p-4">No Data</div>}
         {data.map((_it: any, k: number) => (
           <div className="flex odd:bg-[#0a101d] px-2" key={k}>
-            <div className="py-4 pl-4 min-w-16 flex justify-center">
-              <EthereumBlockie address={_it.address} size={36} />
-            </div>
+            <div className="py-4 pl-4 min-w-16 flex justify-center"></div>
             <div className={elSt + "w-[40%]"}>
               <div>
                 <div>{_it.name || "null"}</div>
@@ -80,12 +77,6 @@ export default function PurchasesPage() {
                 </div>
               </div>
             </div>
-
-            <AddressT
-              address={_it.address}
-              iconSize={20}
-              className={elSt + "w-[34%] text-[#B3BDCB] text-sm"}
-            />
 
             <div
               className={

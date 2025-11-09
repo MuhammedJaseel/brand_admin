@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import { AddressT, EthereumBlockie } from "../widgets/ethers";
 import { IC } from "../components/librery";
 import { Paging } from "../components/paging";
 import { useSelector } from "react-redux";
@@ -71,7 +70,7 @@ export default function TxnsPage() {
         {data.map((_it: any, k: number) => (
           <div className="flex odd:bg-[#0a101d] px-2" key={k}>
             <div className="py-4 pl-4 min-w-16 flex justify-center">
-              <EthereumBlockie address={_it.address} size={36} />
+              
             </div>
             <div className={elSt + "w-[40%]"}>
               <div>
@@ -82,11 +81,7 @@ export default function TxnsPage() {
               </div>
             </div>
 
-            <AddressT
-              address={_it.address}
-              iconSize={20}
-              className={elSt + "w-[34%] text-[#B3BDCB] text-sm"}
-            />
+            
 
             <div
               className={
